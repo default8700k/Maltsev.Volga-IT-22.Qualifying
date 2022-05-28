@@ -12,49 +12,47 @@
     <script type="text/javascript" src="/lib/jquery/jquery.min.js" asp-append-version="true"></script>
     <script type="text/javascript" src="/lib/bootstrap/bootstrap.min.js" asp-append-version="true"></script>
 
-    <title>@ViewBag.Title - Мальцев В.Л.</title>
+    <title>@ViewBag.Title - Мальцев Виктор</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-light fixed-top">
         <div class="container-lg">
-            <a class="navbar-brand" href="#">Мальцев В.Л.</a>
+            <a class="navbar-brand text-dark text-decoration-none" href="#">Мальцев Виктор</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navigation">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Home" asp-action="Index">Главная</a>
+                        <a class="nav-link link-secondary" asp-controller="Home" asp-action="Index">Главная</a>
                     </li>
                     @if (User.Identity != null && User.Identity.IsAuthenticated)
                     {
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Applications" asp-action="Index">Список приложений</a>
+                            <a class="nav-link link-secondary" asp-controller="Applications" asp-action="Index">Список приложений</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Applications" asp-action="Create">Добавить приложение</a>
+                            <a class="nav-link link-secondary" asp-controller="Applications" asp-action="Create">Добавить приложение</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Account" asp-action="Logout">Выйти</a>
+                            <a class="nav-link link-secondary" asp-controller="Account" asp-action="Logout">Выйти</a>
                         </li>
                     }
                     else
                     {
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Account" asp-action="Login">Авторизация</a>
+                            <a class="nav-link link-secondary" asp-controller="Account" asp-action="Login">Авторизация</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Account" asp-action="Register">Регистрация</a>
+                            <a class="nav-link link-secondary" asp-controller="Account" asp-action="Register">Регистрация</a>
                         </li>
                     }
                 </ul>
             </div>
         </div>
     </nav>
-    <main class="container-lg" role="main">
-        <div class="my-3 my-lg-5">
-            @RenderBody()
-        </div>
+    <main class="container-lg py-3" role="main">
+        @RenderBody()
     </main>
 </body>
 </html>
