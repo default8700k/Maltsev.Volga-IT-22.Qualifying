@@ -8,6 +8,8 @@
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <FileVersion>1.0.0.0</FileVersion>
         <Version>1.0.0</Version>
+
+        <RootNamespace>Maltsev.Volga_IT_22.Qualifying.WebApplication</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -20,26 +22,6 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
         <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.3.1" />
         <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="6.3.1" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <Content Remove="Views\Applications\Index.cshtml" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <Folder Include="wwwroot\fonts\" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <UpToDateCheckInput Remove="Views\Applications\Index.cshtml" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <_ContentIncludedByDefault Remove="Views\Applications\Index.cshtml" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <None Include="Views\Applications\Index.cshtml" />
     </ItemGroup>
 
 </Project>
